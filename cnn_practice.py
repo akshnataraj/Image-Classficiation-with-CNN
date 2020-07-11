@@ -111,3 +111,13 @@ model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='
 model.fit(X_train, Y_train, batch_size=128, epochs=10, validation_data=(X_test, Y_test))
 
 """**Accuracy decreased after using CNN"""
+
+'''
+Identifying Images from the CIFAR-10 Dataset using CNNs
+
+The important points that distinguish this dataset from MNIST are:
+
+Images are colored in CIFAR-10 as compared to the black and white texture of MNIST
+Each image is 32 x 32 pixel
+50,000 training images and 10,000 testing images
+'''
