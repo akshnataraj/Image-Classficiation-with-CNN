@@ -111,25 +111,3 @@ model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='
 model.fit(X_train, Y_train, batch_size=128, epochs=10, validation_data=(X_test, Y_test))
 
 """**Accuracy decreased after using CNN"""
-
- building a linear stack of layers with the sequential model
-model = Sequential()
-# adding 2D convolutional layer
-model.add(Conv2D(25, kernel_size=(3,3), strides=(1,1), padding='valid', activation='relu', input_shape=(28,28,1))) 
-#When padding = valid it means zero padding has been added, filter size 3
-model.add(MaxPool2D(pool_size=(1,1)))
-# flatten output of conv
-model.add(Flatten())
-# hidden layer
-model.add(Dense(100, activation='relu'))
-# output layer
-model.add(Dense(10, activation='softmax'))
-
-# compiling the sequential model
-model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
-
-# training the model for 10 epochs
-model.fit(X_train, Y_train, batch_size=128, epochs=10, validation_data=(X_test, Y_test))
-
-"""**Accuracy decreased after using CNN"""
-
